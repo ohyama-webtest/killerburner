@@ -69,57 +69,21 @@ section {
   padding-right: 20px;
 }
 
-@-webkit-keyframes btn-large {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-  }
-}
-
 @keyframes btn-large {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-  }
-}
-
-@-webkit-keyframes btn-move {
-  0% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    transform: scale(1.05);
   }
 }
 
 @keyframes btn-move {
   0% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    transform: translateY(-10px);
   }
   100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-}
-
-@-webkit-keyframes arrow-hide {
-  0% {
-    display: block;
-  }
-  100% {
-    display: none;
-    opacity: 0;
+    transform: translateY(10px);
   }
 }
 
@@ -127,7 +91,7 @@ section {
   0% {
     display: block;
   }
-  100% {
+  60% {
     display: none;
     opacity: 0;
   }
@@ -150,19 +114,14 @@ section {
 }
 
 .top-coupon-present .marker {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(65%, transparent), color-stop(65%, #fdff69));
   background: linear-gradient(transparent 65%, #fdff69 65%);
   font-weight: bold;
 }
 
 .yes-or-no .btn-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -195,13 +154,11 @@ section {
 
 .yes-or-no .btn-wrapper .yes.on {
   background-color: #EBE7E2;
-  -webkit-transition: background-color .2s;
   transition: background-color .2s;
 }
 
 .yes-or-no .btn-wrapper .no.on {
   background-color: #EBE7E2;
-  -webkit-transition: background-color .2s;
   transition: background-color .2s;
 }
 
@@ -225,10 +182,7 @@ section {
   padding-left: 50px;
   cursor: pointer;
   font-size: 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   /* テキストの選択を防ぐ */
 }
 
@@ -254,8 +208,7 @@ section {
   border: solid 2px #5799ff;
   /* 線 */
   border-radius: 4px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 500px) {
@@ -277,8 +230,7 @@ section {
   /* チェックの大きさ */
   border: solid #fff;
   border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   opacity: 0;
   /* 透明にしておく */
 }
@@ -296,14 +248,10 @@ section {
 }
 
 .send-btn {
-  -webkit-animation-name: btn-large;
-          animation-name: btn-large;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation-name: btn-large;
+  animation-iteration-count: infinite;
+  animation-duration: .5s;
+  animation-direction: alternate;
   cursor: pointer;
   width: 80%;
   margin: 0 auto;
@@ -316,10 +264,8 @@ section {
 }
 
 .move {
-  -webkit-animation-name: btn-move;
-          animation-name: btn-move;
-  -webkit-animation-duration: .3s;
-          animation-duration: .3s;
+  animation-name: btn-move;
+  animation-duration: .3s;
 }
 
 .click-show {
@@ -330,12 +276,9 @@ footer {
   width: 270px;
   margin: 0 auto;
   margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 0px 10px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
@@ -349,7 +292,14 @@ footer p a {
 
 .arrow-hide {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+  z-index: 5;
+}
+
+@media screen and (max-width: 500px) {
+  .arrow-hide {
+    margin-bottom: 50px;
+  }
 }
 
 .arrow-hide img {
@@ -358,22 +308,14 @@ footer p a {
 }
 
 .arrow-hide .arrow-hide1 {
-  -webkit-animation-name: arrow-hide;
-          animation-name: arrow-hide;
-  -webkit-animation-duration: .8s;
-          animation-duration: .8s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: .44s;
-          animation-delay: .44s;
+  animation-name: arrow-hide;
+  animation-duration: .6s;
+  animation-iteration-count: infinite;
+  animation-delay: .3s;
 }
 
 .arrow-hide .arrow-hide2 {
-  -webkit-animation-name: arrow-hide;
-          animation-name: arrow-hide;
-  -webkit-animation-duration: .8s;
-          animation-duration: .8s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: arrow-hide;
+  animation-duration: .6s;
+  animation-iteration-count: infinite;
 }
-/*# sourceMappingURL=style.css.map */
